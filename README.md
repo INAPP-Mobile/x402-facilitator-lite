@@ -2,18 +2,58 @@
 
 Self-hosted x402 payment facilitator for USDC on Base. Verify and settle payments in one click.
 
-## Deploy to Railway
+# Deploy and Host
 
 Deploy and run your own facilitator. After deploy, set `EVM_PRIVATE_KEY` in the service variables.
 
-[![Deploy to Railway](https://railway.app/button.svg)](https://railway.com/deploy/Ga8Kt2)
+[![Deploy to Railway](https://railway.app/button.svg)](https://railway.com/deploy/x402-facilitator-lite)
 
-## Why Self-host
+## About Hosting
 
 Your own facilitator means 0% platform fees, sub-5ms latency, and full control over your payment rail. Once your APIs point to it, it stays — payment infrastructure should never be a single point of failure you don't control.
 
+## Why Deploy
+
 - **Self-host** — Your Node.js binary on Railway, you control the keys, 0% fee
 - **Coinbase CDP** — `x402.org/facilitator` + API key, Coinbase sees all payments
+
+## Common Use Cases
+
+- Paywalled AI APIs — charge per request in USDC
+- Agent-to-agent payments — your own settlement rail
+- Micropayments — $0.01 per API call, no platform cut
+- Multi-template monetization — shared payment backend for all your Railway templates
+
+## Dependencies for
+
+- Base mainnet (eip155:8453) + Base Sepolia (eip155:84532)
+- USDC on Base (0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913)
+- x402 v2 exact scheme
+
+### Deployment Dependencies
+
+- Railway Hobby plan (~$3/month for 50MB RAM)
+- Node.js 20+ (included in container)
+- No external database required
+
+## Integration
+
+Use with `x402-express` or any x402 v2 client:
+
+```js
+import { paymentMiddleware } from "x402-express";
+
+app.use(paymentMiddleware(
+  process.env.EVM_PAY_TO_ADDRESS,
+  { "/api/generate": { price: "$0.01", network: "base" } },
+  { url: "https://your-facilitator.up.railway.app" }
+));
+```
+
+## Cost
+
+- Railway Hobby: ~$3/month for 50MB RAM
+- Pays for itself after 300 paid requests at $0.01 each
 
 ## Quick Start
 
