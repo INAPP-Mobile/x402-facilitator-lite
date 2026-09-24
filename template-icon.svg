@@ -1,22 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0A0E27"/>
-      <stop offset="1" stop-color="#1A2050"/>
+      <stop offset="0%" stop-color="#0D1B2A"/>
+      <stop offset="100%" stop-color="#1B2838"/>
     </linearGradient>
-    <linearGradient id="coin" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2775CA"/>
-      <stop offset="1" stop-color="#1B5FBF"/>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00D68F"/>
+      <stop offset="100%" stop-color="#00A86B"/>
+    </linearGradient>
+    <linearGradient id="usdc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2775CA"/>
+      <stop offset="100%" stop-color="#0052FF"/>
     </linearGradient>
   </defs>
-  <rect width="256" height="256" rx="52" fill="url(#bg)"/>
-  <!-- lightning bolt = instant payment -->
-  <path d="M148 28 L68 140 h48 L104 228 L188 108 h-50 Z" fill="#F7931A"/>
-  <!-- coin ring -->
-  <circle cx="128" cy="128" r="88" fill="none" stroke="url(#coin)" stroke-width="10" opacity="0.9"/>
-  <!-- orbit dots -->
-  <circle cx="128" cy="40" r="8" fill="#2775CA"/>
-  <circle cx="216" cy="128" r="8" fill="#2775CA"/>
-  <circle cx="128" cy="216" r="8" fill="#2775CA"/>
-  <circle cx="40" cy="128" r="8" deployable="no" fill="#2775CA"/>
+  <!-- Background -->
+  <rect width="256" height="256" rx="56" fill="url(#bg)"/>
+  <!-- Shield shape = verified settlement -->
+  <path d="M128 28 L200 60 L200 128 Q200 188 128 228 Q56 188 56 128 L56 60 Z"
+        fill="url(#shield)" opacity="0.2"/>
+  <path d="M128 40 L190 68 L190 128 Q190 180 128 216 Q66 180 66 128 L66 68 Z"
+        fill="none" stroke="url(#shield)" stroke-width="6"/>
+  <!-- Checkmark = verified -->
+  <polyline points="92,130 118,156 166,104" fill="none" stroke="#00D68F" stroke-width="14"
+            stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- USDC arc at bottom -->
+  <path d="M52,200 Q128,232 204,200" fill="none" stroke="url(#usdc)" stroke-width="8"
+        stroke-linecap="round" opacity="0.6"/>
+  <!-- Small USDC dot -->
+  <circle cx="128" cy="216" r="10" fill="#2775CA"/>
 </svg>
