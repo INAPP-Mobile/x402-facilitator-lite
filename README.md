@@ -6,7 +6,7 @@ Self-hosted x402 payment facilitator for USDC on Base. Verify and settle payment
 
 Deploy and run your own facilitator. After deploy, set `EVM_PRIVATE_KEY` in the service variables.
 
-[![Deploy to Railway](https://railway.app/button.svg)](https://railway.com/deploy/x402-facilitator-lite)
+[![Deploy to Railway](https://railway.app/button.svg)](https://railway.com/deploy/x402-facilitator-l-1)
 
 ## About Hosting
 
