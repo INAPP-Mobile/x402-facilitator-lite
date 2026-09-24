@@ -6,7 +6,8 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "node --watch src/server.js"
+    "dev": "node --watch src/server.js",
+    "test:e2e": "node test/e2e.js"
   },
   "dependencies": {
     "@hono/node-server": "^2.1.1",
