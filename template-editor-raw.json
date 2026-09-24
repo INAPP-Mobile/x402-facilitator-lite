@@ -1,0 +1,26 @@
+{
+  "EVM_PRIVATE_KEY": {
+    "value": "",
+    "description": "EVM private key (0x-prefixed) — gas wallet for settlement transactions. Generate a new burner key; never use a main wallet."
+  },
+  "EVM_PAY_TO_ADDRESS": {
+    "value": "",
+    "description": "Your USDC receiver address (where settled funds go). If empty, defaults to the EVM_PRIVATE_KEY address.",
+    "isOptional": true
+  },
+  "RPC_URL": {
+    "value": "https://mainnet.base.org",
+    "description": "Base mainnet RPC URL. Override if using a private RPC (Alchemy, Infura, etc.).",
+    "isOptional": true
+  },
+  "RPC_URL_SEPOLIA": {
+    "value": "https://sepolia.base.org",
+    "description": "Base Sepolia RPC URL (testnet). Override if using a private RPC.",
+    "isOptional": true
+  },
+  "PORT": {
+    "value": "8080",
+    "description": "Server port. Railway maps this to the public domain.",
+    "isOptional": true
+  }
+}

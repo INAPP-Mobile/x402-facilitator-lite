@@ -1,7 +1,7 @@
 {
   "name": "x402-facilitator-lite",
   "description": "Self-hosted x402 payment facilitator for USDC on Base",
-  "icon": "https://files.catbox.moe/5ogq0r.svg",
+  "icon": "https://files.catbox.moe/vz7wyw.svg",
   "variables": {
     "EVM_PRIVATE_KEY": {
       "description": "EVM private key (0x-prefixed) - gas wallet for settlement transactions",
