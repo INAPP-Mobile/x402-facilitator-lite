@@ -1,0 +1,37 @@
+{
+  "name": "x402-facilitator-lite",
+  "description": "Self-hosted x402 payment facilitator for USDC on Base",
+  "icon": "https://files.catbox.moe/5ogq0r.svg",
+  "variables": {
+    "EVM_PRIVATE_KEY": {
+      "description": "EVM private key (0x-prefixed) - gas wallet for settlement transactions",
+      "required": true,
+      "sensitive": true,
+      "default": ""
+    },
+    "EVM_PAY_TO_ADDRESS": {
+      "description": "Your USDC receiver address (where settled funds go)",
+      "required": false,
+      "sensitive": false,
+      "default": ""
+    },
+    "RPC_URL": {
+      "description": "Base mainnet RPC URL",
+      "required": false,
+      "sensitive": false,
+      "default": "https://mainnet.base.org"
+    },
+    "RPC_URL_SEPOLIA": {
+      "description": "Base Sepolia RPC URL (testnet)",
+      "required": false,
+      "sensitive": false,
+      "default": "https://sepolia.base.org"
+    },
+    "PORT": {
+      "description": "Server port",
+      "required": false,
+      "sensitive": false,
+      "default": "8080"
+    }
+  }
+}

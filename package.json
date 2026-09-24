@@ -1,0 +1,19 @@
+{
+  "name": "x402-facilitator-lite",
+  "version": "1.0.0",
+  "description": "Self-hosted x402 payment facilitator - verify and settle USDC payments on Base",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.1",
+    "@oviato/x402-facilitator-hono": "^1.0.0",
+    "hono": "^4.6.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
